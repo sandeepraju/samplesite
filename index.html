@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>samplesite.com</title>
+		<!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+		<!--
+		<style type="text/css">
+		*{
+		/* Universal reset: */
+		margin:0;
+		padding:0;
+		}
+
+		header,footer,
+		article,section,
+		hgroup,nav,
+		figure{
+		/* Giving a display value to the HTML5 rendered elements: */
+		display:block;
+		}
+
+		body{
+		/* Setting the default text color, size, page background and a font stack: */
+		font-size:0.825em;
+		color:#2c2c2c;
+		background-color:#FFFFFF;
+		font-family:Arial, Helvetica, sans-serif;
+		}
+
+		/* Hyperlink Styles: */
+
+		a, a:visited {
+		color:#2C2C2C;
+		text-decoration:none;
+		outline:none;
+		}
+
+		a:hover{
+		text-decoration:underline;
+		}
+
+		h1,h2,h3{
+		font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+		text-shadow:0 1px 1px black;
+		}
+
+		h1{
+		/* The logo text */
+		font-size:3.5em;
+		padding:0.5em 0 0;
+		text-transform:uppercase;
+		}
+
+		h3{
+		/* The slogan text */
+		font-family:forte,"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+		font-size:2em;
+		font-weight:normal;
+		margin:0 0 1em;
+		}
+
+		h2{
+		font-size:2.2em;
+		font-weight:normal;
+		letter-spacing:0.01em;
+		text-transform:uppercase;
+		}
+
+		p{
+		line-height:1.5em;
+		padding-bottom:1em;
+		}
+
+		.line{
+		/* The dividing line: */
+		height:1px;
+		background-color:#24404c;
+		border-bottom:1px solid #416371;
+		margin:1em 0;
+		overflow:hidden;
+		}
+
+		article .line{
+		/* The dividing line inside of the article is darker: */
+		background-color:#15242a;
+		border-bottom-color:#204656;
+		margin:1.3em 0;
+		}
+
+		footer .line{
+		margin:2em 0;
+		}
+
+		/* The clearfix hack to clear the floats: */
+		/* What is this? Please clear this out!*/
+		.clear:after{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		}
+
+		nav ul li{
+		display:inline;
+		}
+		</style>
+		-->
+		<style type="text/css">
+			* {
+				/* Universal reset: */
+				margin: 0;
+				padding: 0;
+			}
+			header, footer, article, section, hgroup, nav, figure {
+				/* Giving a display value to the HTML5 rendered elements: */
+				display: block;
+			}
+			body {
+				/* Setting the default text color, size, page background and a font stack: */
+				font-size: 14px;
+				color: #FFFFFF;
+				background-color: #2C2C2C;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			article, nav ul li a, figure {
+				/* Applying CSS3 rounded corners: */
+				-moz-border-radius: 15px 0px 15px 0px;
+				-webkit-border-radius: 15px 0px 15px 0px;
+				border-radius: 15px 0px 15px 0px;
+			}
+			#page {
+				width: 960px;
+				margin: auto;
+				position: relative;
+			}
+			nav ul li {
+				display: inline;
+			}
+			nav ul li a, nav ul li a:visited {
+				color: #ffffff;
+				display: block;
+				float: left;
+				font-size: 1.25em;
+				font-weight: bold;
+				margin: 5px 2px;
+				padding: 7px 10px 4px;
+				text-shadow: 0 1px 1px white;
+				text-transform: uppercase;
+				text-decoration: none;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px;
+			}
+			footer a, nav ul li a:hover {
+				text-decoration: none;
+				background-color: #2C2C2C;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px;
+			}
+			nav {
+
+				width: 370px;
+				margin: auto;
+				position: relative;
+				top: 5px;
+				background-color: #000000;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px;
+			}
+			ul {
+				width: 355px;
+				margin: auto;
+				height: 50px;
+				position: relative;
+				top: 3px;
+			}
+			header {
+				width: inherit;
+				height: 150px;
+				/*position: fixed;*/
+				top: 0px;
+				z-index: 200;
+				background-color: #514F4F;
+				/* Applying CSS3 rounded corners: */
+				-moz-border-radius: 0px 0px 15px 15px;
+				-webkit-border-radius: 0px 0px 15px 15px;
+				border-radius: 0px 0px 15px 15px;
+			}
+			footer {
+				width: inherit;
+				height: 100px;
+				/*position: fixed;*/
+				bottom: 0px;
+				z-index: 200;
+				background-color: #514F4F;
+				/* Applying CSS3 rounded corners: */
+				-moz-border-radius: 15px 15px 0px 0px;
+				-webkit-border-radius: 15px 15px 0px 0px;
+				border-radius: 15px 15px 0px 0px;
+			}
+			article {
+				/*width: inherit;*/
+				height: 400px;
+				background-color: #514F4F;
+				/*border-color: #2c2c2c;
+				 border-width: 2px;
+				 border-style: solid;*/
+				margin-top: 25px;
+				margin-bottom: 25px;
+				padding: 15px;
+				-moz-box-shadow: 0 0 2px #888888;
+				-webkit-box-shadow: 0 0 2px #888888;
+				box-shadow: 0 0 2px #888888;
+			}
+			p {
+				padding: 10px;
+			}
+			h1, h3 {
+				text-align: center;
+			}
+			h1 a {
+				text-decoration: none;
+				font-size: 50px;
+			}
+			
+			h1 a, h1 a:visited {
+				color: #FFFFFF;
+				
+			}
+			
+			h1 a:hover {
+				color: #CFCFCF;
+			}
+			
+			h3
+			{
+				position: relative;
+				left: 93px;
+				top: -10px;
+			}
+			
+			#cright
+			{
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			footer a, footer a:visited
+			{
+				
+				width: 58px;	
+				color: #FFFFFF;
+				text-decoration: none;
+				position: relative;
+				top: 15px;
+				
+				
+				display: block;
+				/*float: left;*/
+				font-size: 1.25em;
+				font-weight: bold;
+				margin: 5px 2px;
+				padding: 7px 10px 4px;
+				text-shadow: 0 1px 1px white;
+				text-transform: uppercase;
+				text-decoration: none;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px;
+				margin: auto;
+				background-color: #000000;
+				
+			}
+			
+			footer a:hover {
+				/*color: #CFCFCF;*/
+				text-decoration: none;
+				background-color: #2C2C2C;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px;
+			}
+
+		</style>
+		<!-- Internet Explorer HTML5 enabling script: -->
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<style type="text/css">
+
+		.clear {
+		zoom: 1;
+		display: block;
+		}
+
+		</style>
+
+		<![endif]-->
+	</head>
+	<body>
+		<section id="page">
+			<header>
+				<h1><a href="">samplesite.com</a></h1>
+				<h3>sample site tagline here</h3>
+				<nav class="clear">
+					<ul>
+						<li>
+							<a href="#article1">First</a>
+						</li>
+						<li>
+							<a href="#article2">Second</a>
+						</li>
+						<li>
+							<a href="#article3">Third</a>
+						</li>
+						<li>
+							<a href="#article4">Fourth</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div class="line"></div>
+			<article id="article1">
+				<h2>First</h2>
+				<div class="line"></div>
+				<div class="articleBody clear">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, tortor ac ornare facilisis, ante velit porttitor libero, eget auctor eros turpis ac tortor. Nulla facilisi. Mauris sit amet est libero, ut congue purus. Suspendisse non diam sodales orci faucibus interdum. In aliquet faucibus augue in suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean augue nisi, pharetra vel accumsan sed, venenatis ac velit. Phasellus convallis feugiat tristique. Nullam a est id turpis laoreet congue a quis mi. Integer dapibus, purus id suscipit pulvinar, nisi ligula accumsan velit, eu dictum sapien massa et nibh. Donec vitae varius neque. Mauris non tempor nulla. Nulla feugiat venenatis ligula ut porta.
+					</p>
+					<p>
+						Etiam id odio nec eros commodo ornare et vitae sapien. Proin interdum posuere ipsum eu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas bibendum, odio id iaculis bibendum, arcu ipsum adipiscing elit, sed lacinia eros erat ac urna. Duis sit amet augue tellus. Nulla at purus sit amet nibh rhoncus posuere quis eget turpis. Fusce pharetra bibendum dignissim. Duis sollicitudin velit sit amet leo rhoncus dictum dictum quam pretium. Phasellus eget aliquam nisi. Morbi venenatis dictum euismod. Nullam faucibus, erat vel tempus condimentum, nisi risus sodales dolor, ut rhoncus eros est vel urna. Nam hendrerit placerat orci non iaculis. Nulla posuere augue vitae quam iaculis laoreet. Nulla id nulla felis, eu posuere dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					</p>
+					<p>
+						Duis facilisis aliquam odio, non elementum dolor consequat et. Proin blandit risus sit amet erat blandit condimentum sollicitudin leo adipiscing. Suspendisse ligula dolor, commodo vitae pellentesque sit amet, ornare at velit. Nullam semper rhoncus libero ac mattis. Nunc feugiat nunc non lacus tempor sed placerat justo ultrices. Aliquam tempus bibendum metus non condimentum. Nulla posuere egestas nisl eu sollicitudin. Aliquam feugiat, elit in vestibulum dictum, mauris lacus vehicula sem, ut aliquam massa arcu et ligula. Morbi quis arcu a magna pulvinar imperdiet. Proin a purus nec metus vehicula dignissim. In eu lobortis erat. Aenean iaculis, massa vitae venenatis porta, lorem magna pellentesque mi, id adipiscing nunc urna eu nisl. Maecenas dictum luctus lectus ut ultrices.
+					</p>
+				</div>
+			</article>
+			<div class="line"></div>
+			<article id="article2">
+				<h2>Second</h2>
+				<div class="line"></div>
+				<div class="articleBody clear">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, tortor ac ornare facilisis, ante velit porttitor libero, eget auctor eros turpis ac tortor. Nulla facilisi. Mauris sit amet est libero, ut congue purus. Suspendisse non diam sodales orci faucibus interdum. In aliquet faucibus augue in suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean augue nisi, pharetra vel accumsan sed, venenatis ac velit. Phasellus convallis feugiat tristique. Nullam a est id turpis laoreet congue a quis mi. Integer dapibus, purus id suscipit pulvinar, nisi ligula accumsan velit, eu dictum sapien massa et nibh. Donec vitae varius neque. Mauris non tempor nulla. Nulla feugiat venenatis ligula ut porta.
+					</p>
+					<p>
+						Etiam id odio nec eros commodo ornare et vitae sapien. Proin interdum posuere ipsum eu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas bibendum, odio id iaculis bibendum, arcu ipsum adipiscing elit, sed lacinia eros erat ac urna. Duis sit amet augue tellus. Nulla at purus sit amet nibh rhoncus posuere quis eget turpis. Fusce pharetra bibendum dignissim. Duis sollicitudin velit sit amet leo rhoncus dictum dictum quam pretium. Phasellus eget aliquam nisi. Morbi venenatis dictum euismod. Nullam faucibus, erat vel tempus condimentum, nisi risus sodales dolor, ut rhoncus eros est vel urna. Nam hendrerit placerat orci non iaculis. Nulla posuere augue vitae quam iaculis laoreet. Nulla id nulla felis, eu posuere dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					</p>
+					<p>
+						Duis facilisis aliquam odio, non elementum dolor consequat et. Proin blandit risus sit amet erat blandit condimentum sollicitudin leo adipiscing. Suspendisse ligula dolor, commodo vitae pellentesque sit amet, ornare at velit. Nullam semper rhoncus libero ac mattis. Nunc feugiat nunc non lacus tempor sed placerat justo ultrices. Aliquam tempus bibendum metus non condimentum. Nulla posuere egestas nisl eu sollicitudin. Aliquam feugiat, elit in vestibulum dictum, mauris lacus vehicula sem, ut aliquam massa arcu et ligula. Morbi quis arcu a magna pulvinar imperdiet. Proin a purus nec metus vehicula dignissim. In eu lobortis erat. Aenean iaculis, massa vitae venenatis porta, lorem magna pellentesque mi, id adipiscing nunc urna eu nisl. Maecenas dictum luctus lectus ut ultrices.
+					</p>
+				</div>
+			</article>
+			<div class="line"></div>
+			<article id="article3">
+				<h2>Third</h2>
+				<div class="line"></div>
+				<div class="articleBody clear">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, tortor ac ornare facilisis, ante velit porttitor libero, eget auctor eros turpis ac tortor. Nulla facilisi. Mauris sit amet est libero, ut congue purus. Suspendisse non diam sodales orci faucibus interdum. In aliquet faucibus augue in suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean augue nisi, pharetra vel accumsan sed, venenatis ac velit. Phasellus convallis feugiat tristique. Nullam a est id turpis laoreet congue a quis mi. Integer dapibus, purus id suscipit pulvinar, nisi ligula accumsan velit, eu dictum sapien massa et nibh. Donec vitae varius neque. Mauris non tempor nulla. Nulla feugiat venenatis ligula ut porta.
+					</p>
+					<p>
+						Etiam id odio nec eros commodo ornare et vitae sapien. Proin interdum posuere ipsum eu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas bibendum, odio id iaculis bibendum, arcu ipsum adipiscing elit, sed lacinia eros erat ac urna. Duis sit amet augue tellus. Nulla at purus sit amet nibh rhoncus posuere quis eget turpis. Fusce pharetra bibendum dignissim. Duis sollicitudin velit sit amet leo rhoncus dictum dictum quam pretium. Phasellus eget aliquam nisi. Morbi venenatis dictum euismod. Nullam faucibus, erat vel tempus condimentum, nisi risus sodales dolor, ut rhoncus eros est vel urna. Nam hendrerit placerat orci non iaculis. Nulla posuere augue vitae quam iaculis laoreet. Nulla id nulla felis, eu posuere dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					</p>
+					<p>
+						Duis facilisis aliquam odio, non elementum dolor consequat et. Proin blandit risus sit amet erat blandit condimentum sollicitudin leo adipiscing. Suspendisse ligula dolor, commodo vitae pellentesque sit amet, ornare at velit. Nullam semper rhoncus libero ac mattis. Nunc feugiat nunc non lacus tempor sed placerat justo ultrices. Aliquam tempus bibendum metus non condimentum. Nulla posuere egestas nisl eu sollicitudin. Aliquam feugiat, elit in vestibulum dictum, mauris lacus vehicula sem, ut aliquam massa arcu et ligula. Morbi quis arcu a magna pulvinar imperdiet. Proin a purus nec metus vehicula dignissim. In eu lobortis erat. Aenean iaculis, massa vitae venenatis porta, lorem magna pellentesque mi, id adipiscing nunc urna eu nisl. Maecenas dictum luctus lectus ut ultrices.
+					</p>
+				</div>
+			</article>
+			<div class="line"></div>
+			<article id="article4">
+				<h2>Fourth</h2>
+				<div class="line"></div>
+				<div class="articleBody clear">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, tortor ac ornare facilisis, ante velit porttitor libero, eget auctor eros turpis ac tortor. Nulla facilisi. Mauris sit amet est libero, ut congue purus. Suspendisse non diam sodales orci faucibus interdum. In aliquet faucibus augue in suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean augue nisi, pharetra vel accumsan sed, venenatis ac velit. Phasellus convallis feugiat tristique. Nullam a est id turpis laoreet congue a quis mi. Integer dapibus, purus id suscipit pulvinar, nisi ligula accumsan velit, eu dictum sapien massa et nibh. Donec vitae varius neque. Mauris non tempor nulla. Nulla feugiat venenatis ligula ut porta.
+					</p>
+					<p>
+						Etiam id odio nec eros commodo ornare et vitae sapien. Proin interdum posuere ipsum eu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas bibendum, odio id iaculis bibendum, arcu ipsum adipiscing elit, sed lacinia eros erat ac urna. Duis sit amet augue tellus. Nulla at purus sit amet nibh rhoncus posuere quis eget turpis. Fusce pharetra bibendum dignissim. Duis sollicitudin velit sit amet leo rhoncus dictum dictum quam pretium. Phasellus eget aliquam nisi. Morbi venenatis dictum euismod. Nullam faucibus, erat vel tempus condimentum, nisi risus sodales dolor, ut rhoncus eros est vel urna. Nam hendrerit placerat orci non iaculis. Nulla posuere augue vitae quam iaculis laoreet. Nulla id nulla felis, eu posuere dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					</p>
+					<p>
+						Duis facilisis aliquam odio, non elementum dolor consequat et. Proin blandit risus sit amet erat blandit condimentum sollicitudin leo adipiscing. Suspendisse ligula dolor, commodo vitae pellentesque sit amet, ornare at velit. Nullam semper rhoncus libero ac mattis. Nunc feugiat nunc non lacus tempor sed placerat justo ultrices. Aliquam tempus bibendum metus non condimentum. Nulla posuere egestas nisl eu sollicitudin. Aliquam feugiat, elit in vestibulum dictum, mauris lacus vehicula sem, ut aliquam massa arcu et ligula. Morbi quis arcu a magna pulvinar imperdiet. Proin a purus nec metus vehicula dignissim. In eu lobortis erat. Aenean iaculis, massa vitae venenatis porta, lorem magna pellentesque mi, id adipiscing nunc urna eu nisl. Maecenas dictum luctus lectus ut ultrices.
+					</p>
+				</div>
+			</article>
+			<footer>
+				<div class="line"></div>
+				<p id="cright">
+					copyright 2011 - samplesite.com
+				</p>
+				<a href="#" class="up">Go UP</a>
+			</footer>
+		</section>
+		<!-- JavaScript Includes -->
+		<script src="jquery-1.3.2.min.js"></script>
+		<script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
